@@ -370,7 +370,7 @@ msgstr "Article"
 #. module: library
 #: model:ir.model.fields,field_description:library.field_product_product__publisher_id
 msgid "Publisher"
-msgstr "Publisseur"
+msgstr "Editeur"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_rental__rental_date
@@ -457,7 +457,7 @@ msgstr "nouveau payement"
 #. module: library
 #: model:ir.model.fields,field_description:library.field_res_partner__publisher
 msgid "is a Publisher"
-msgstr "est un publisseur"
+msgstr "est un Editeur"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_product_product__book
