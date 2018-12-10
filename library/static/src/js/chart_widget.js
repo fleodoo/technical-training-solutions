@@ -2,7 +2,7 @@ odoo.define('library.ChartWidget', function (require) {
 "use strict";
 
 var ajax = require('web.ajax');
-var Widget = require('web.Widget');
+var Widget = require('web.AbstractAction');
 
 // var QWeb = core.qweb;
 // var _t = core._t;

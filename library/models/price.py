@@ -3,6 +3,7 @@ from odoo import models, fields, api, exceptions, _
 
 class Price(models.Model):
     _name = 'library.price'
+    _description='price of actions'
 
     name = fields.Char('Name',)
     duration = fields.Float('Duration in days',)

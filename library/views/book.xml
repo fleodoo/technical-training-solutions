@@ -79,8 +79,10 @@
             <field name="model">product.product</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="book"/>
-                    <field name="book_state"/>
+                    <field string="Book" name="book"/>
+                    <field string="State" name="book_state"/>
+                    <filter name="inactive" string="Inactive" domain="[('active', '=', False)]" />
+                    <filter name="all" string="All" domain="['|', ('active', '=', False), ('active', '=', True)]" />
                 </search>
             </field>
         </record>
@@ -90,7 +92,18 @@
             <field name="res_model">product.product</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[('book','=',True)]</field>
-            <field name="context">{'default_book': True, 'search_default_book_state': 'lost'}</field>
+            <field name="context">{'default_book': True, 'search_default_book_state': 'lost', "search_default_all":1}</field>
+            <field name="view_ids" eval="[
+                (5, 0, 0),
+                (0, 0, {
+                    'view_mode': 'tree',
+                    'view_id': ref('library.book_view_tree_id'),
+                    }),
+                (0, 0, {
+                    'view_mode': 'form',
+                    'view_id': ref('library.book_view_form_id'),
+                    }),
+                ]"/>
             <field name="search_view_id" ref="book_search_view"/>
         </record>
 
@@ -100,6 +113,17 @@
             <field name="view_mode">tree,form</field>
             <field name="domain">[('book','=',True)]</field>
             <field name="context">{'default_book': True, 'search_default_book_state': 'available'}</field>
+            <field name="view_ids" eval="[
+                (5, 0, 0),
+                (0, 0, {
+                    'view_mode': 'tree',
+                    'view_id': ref('library.book_view_tree_id'),
+                    }),
+                (0, 0, {
+                    'view_mode': 'form',
+                    'view_id': ref('library.book_view_form_id'),
+                    }),
+                ]"/>
             <field name="search_view_id" ref="book_search_view"/>
         </record>
 
@@ -109,6 +133,17 @@
             <field name="view_mode">tree,form</field>
             <field name="domain">[('book','=',True)]</field>
             <field name="context">{'default_book': True, 'search_default_book_state': 'rented'}</field>
+            <field name="view_ids" eval="[
+                (5, 0, 0),
+                (0, 0, {
+                    'view_mode': 'tree',
+                    'view_id': ref('library.book_view_tree_id'),
+                    }),
+                (0, 0, {
+                    'view_mode': 'form',
+                    'view_id': ref('library.book_view_form_id'),
+                    }),
+                ]"/>
             <field name="search_view_id" ref="book_search_view"/>
         </record>
 

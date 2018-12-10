@@ -1,14 +1,17 @@
 .o_library {
     padding: 16px;
-    .o-flex-display();
 
     .o_statistics {
-        .o-flex(0, 0, auto);
         font-size: 14px;
         line-height: 30px;
     }
-    .o_fancy_chart {
-        .o-flex(1, 1, 0);
 
+}
+
+.o_field_late_boolean {
+    div {
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
     }
 }

@@ -9,15 +9,15 @@ class Partner(models.Model):
     current_rental_ids = fields.One2many(
         'library.rental',
         'customer_id',
-        string='Rentals', domain=[('state','=','rented'), ])
+        string='Current Rentals', domain=[('state','=','rented'), ])
     old_rental_ids = fields.One2many(
         'library.rental',
         'customer_id',
-        string='Rentals', domain=[('state','=','returned'), ])
+        string='Old Rentals', domain=[('state','=','returned'), ])
     lost_rental_ids = fields.One2many(
         'library.rental',
         'customer_id',
-        string='Rentals', domain=[('state','=','lost'), ])
+        string='Lost Rentals', domain=[('state','=','lost'), ])
     book_ids = fields.Many2many(
         comodel_name="product.product",
         string="Books",
@@ -29,12 +29,12 @@ class Partner(models.Model):
     )
     birthdate =  fields.Date('Birthdate',)
 
-    qty_lost_book =  fields.Integer('Number of books lost',  compute="_get_lost_books_qty",)
+    qty_lost_book =  fields.Integer('Number of books lost', compute="_get_lost_books_qty",)
     payment_ids = fields.One2many(
         'library.payment',
         'customer_id',
         string='Payments')
-    amount_owed =  fields.Float('Amount owed',  compute="_amount_owed", store=True,)
+    amount_owed =  fields.Float('Amount owed', compute="_amount_owed", store=True,)
 
     @api.multi
     def _get_lost_books_qty(self):
@@ -46,3 +46,6 @@ class Partner(models.Model):
     def _amount_owed(self):
         for rec in self:
             rec.amount_owed = - sum(rec.payment_ids.mapped('amount'))
+
+
+    

@@ -24,9 +24,9 @@
 
     # always loaded
     'data': [
+        "security/ir.model.access.csv",
         "assets.xml",
         "data/library_data.xml",
-        "data/cron.xml",
         "data/prices.xml",
         "views/menus.xml",
         "views/customer.xml",

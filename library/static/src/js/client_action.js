@@ -5,7 +5,7 @@ var ChartWidget = require('library.ChartWidget');
 var ControlPanelMixin = require('web.ControlPanelMixin');
 
 var core = require('web.core');
-var Widget = require('web.Widget');
+var Widget = require('web.AbstractAction');
 
 var QWeb = core.qweb;
 
@@ -87,7 +87,7 @@ var ClientAction = Widget.extend(ControlPanelMixin, {
      */
     _updateControlPanel: function () {
         this.update_control_panel({
-            breadcrumbs: this.action_manager.get_breadcrumbs(),
+            breadcrumbs: this.action_manager._getBreadcrumbs(),
             cp_content: {
                 $buttons: this.$buttons,
             },

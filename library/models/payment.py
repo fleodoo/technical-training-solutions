@@ -4,6 +4,7 @@ from odoo import models, fields
 
 class Payment(models.Model):
     _name = 'library.payment'
+    _description='create payments'
 
     date = fields.Date(string='Date', required=True, default=lambda self: fields.Date.today())
     amount = fields.Float('Amount')
