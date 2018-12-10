@@ -52,7 +52,7 @@ msgstr "Montant dû "
 #: model:ir.model.fields,field_description:library.field_product_product__author_ids
 #: model:ir.ui.menu,name:library.menu_author
 msgid "Authors"
-msgstr "Auteur"
+msgstr "Auteurs"
 
 #. module: library
 #: selection:product.product,book_state:0
@@ -62,7 +62,7 @@ msgstr "Disponible"
 #. module: library
 #: model:ir.actions.act_window,name:library.action_available_books
 msgid "Available Books"
-msgstr "Livre disponible"
+msgstr "Livres disponibles"
 
 #. module: library
 #. openerp-web
@@ -185,7 +185,7 @@ msgstr "Nom affiché"
 #. module: library
 #: selection:library.rental,state:0
 msgid "Draft"
-msgstr ""
+msgstr "Brouillon"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_price__duration
@@ -195,7 +195,7 @@ msgstr "Durée en jour"
 #. module: library
 #: model:ir.model.fields,field_description:library.field_product_product__edition_date
 msgid "Edition date"
-msgstr "date d’edition"
+msgstr "date d’édition"
 
 #. module: library
 #: model:product.product,name:library.book_got
@@ -220,7 +220,7 @@ msgstr ""
 #. module: library
 #: model_terms:ir.ui.view,arch_db:library.book_search_view
 msgid "Inactive"
-msgstr ""
+msgstr "Inactif"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_rental__is_late
@@ -296,7 +296,7 @@ msgstr "Argent rentré ce mois-ci :"
 #: code:addons/library/static/src/xml/dashboard.xml:9
 #, python-format
 msgid "Money lost due to lost books this month:"
-msgstr "Argent perdu a cause des livres perdu :"
+msgstr "Argent perdu a cause des livres perdus :"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_library_price__name
@@ -314,21 +314,21 @@ msgstr "Nationalité"
 #. module: library
 #: model:ir.model.fields,field_description:library.field_res_partner__qty_lost_book
 msgid "Number of books lost"
-msgstr "Nombre de livre perdu"
+msgstr "Nombre de livres perdus"
 
 #. module: library
 #. openerp-web
 #: code:addons/library/static/src/xml/dashboard.xml:8
 #, python-format
 msgid "Number of books lost this month:"
-msgstr "Nombre de livre perdu ce mois-ci :"
+msgstr "Nombre de livres perdus ce mois-ci :"
 
 #. module: library
 #. openerp-web
 #: code:addons/library/static/src/xml/dashboard.xml:7
 #, python-format
 msgid "Number of rentals this month:"
-msgstr "Nombre de location ce mois-ci :"
+msgstr "Nombre de locations ce mois-ci :"
 
 #. module: library
 #: model:ir.model.fields,field_description:library.field_res_partner__old_rental_ids
@@ -467,7 +467,7 @@ msgstr "est un livre"
 #. module: library
 #: model:ir.model.fields,field_description:library.field_res_partner__author
 msgid "is an Author"
-msgstr "est un auteur"
+msgstr "est un Auteur"
 
 #. module: library
 #: model:product.product,weight_uom_name:library.book_got
